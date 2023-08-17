@@ -4,9 +4,43 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./styles/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/97c53add55.js" crossorigin="anonymous"></script>
 	<title>Text Editor</title>
+	<style>
+		.font-mono {
+			font-family: 'Roboto Mono', monospace;
+		}
+	</style>
 </head>
 <body>
+	<section class="w-3/4 pt-1 mx-auto mt-8 rounded-lg bg-cyan-400">
+		<h1 class="my-5 mb-6 font-mono text-5xl text-center">Text Editor</h1>
+		<div class="w-4/5 p-8 mx-auto rounded-lg bg-cyan-200">
+			<!-- Formats -->
+			<div class="flex justify-around mb-2">
+				<div class="flex text-xl align-center gap-4 h-max">
+					<button id="bold-btn" class="px-1 rounded-lg hover:bg-cyan-400"><i class="block fa-solid fa-bold h-max"></i></button>
+					<button id="italic-btn" class="px-1 rounded-lg hover:bg-cyan-400"><i class="block fa-solid fa-italic h-max"></i></button>
+					<button id="underline-btn" class="px-1 rounded-lg hover:bg-cyan-400"><i class="block fa-solid fa-underline h-max"></i></button>
+				</div>
+				<div class="flex text-xl align-center gap-4 h-max">
+					<button id="align-left-btn" class="px-1 rounded-lg hover:bg-cyan-400"><i class="block h-max fa-solid fa-align-left"></i></button>	
+					<button id="align-center-btn" class="px-1 rounded-lg hover:bg-cyan-400"><i class="block h-max fa-solid fa-align-center"></i></button>
+					<button id="align-right-btn" class="px-1 rounded-lg hover:bg-cyan-400"><i class="block h-max fa-solid fa-align-right"></i></button>
+					<button id="align-justify-btn" class="px-1 rounded-lg hover:bg-cyan-400"><i class="block h-max fa-solid fa-align-justify"></i></button>
+				</div>
+				<div class="flex justify-between gap-2 align-center">
+					<input type="number" class="w-12 p-1 rounded-lg" name="" id="number-input">
+					<input type="color" name="" id="color-input" value="#FF0000">
+				</div>
+			</div>
+			<textarea name="" class="block w-full mx-auto w-max" id="text-input" cols="50" rows="20"></textarea>
+		</div>
+	</section>
+	<script src="./scripts/utilities.js"></script>
 	<script src="./scripts/main.js"></script>
 </body>
 </html>
