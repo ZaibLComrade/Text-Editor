@@ -31,6 +31,10 @@ function format(input, value) {
 	if(input.type === "number") {
 		output.style.fontSize = `${value}px`;
 	}
+	
+	if(input.type === "color") {
+		output.style.color = value;
+	}
 }
 
 function disableExcept(btnsArr, alignType) {
@@ -61,9 +65,6 @@ underlineBtn.addEventListener("click", () => {
 	format(underlineBtn, "underline");
 }) 
 
-// const alignBtns = ["align-left-btn", "align-center-btn", "align-right-btn", "align-justify-btn"];
-// const types = ["left", "center", "right", "justify"];
-
 const types = {
 	"align-left-btn": "left",
 	"align-center-btn": "center",
@@ -80,12 +81,13 @@ for(let i = 0; i < Object.keys(types).length; i++) {
 }
 
 const numberInp = document.getElementById("number-input");
-numberInp.addEventListener("click", () => {
+numberInp.addEventListener("change", () => {
 	const value = parseInt(numberInp.value);
 	if(value >= 10) format(numberInp, value);
 })
 
-numberInp.addEventListener("keyup", () => {
-	const value = parseInt(numberInp.value);
-	if(value >= 10) format(numberInp, value);
+const colorInp = document.getElementById("color-input");
+colorInp.addEventListener("change", () => {
+	const value = colorInp.value;
+	format(colorInp, value)
 })
