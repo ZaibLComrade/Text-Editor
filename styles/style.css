@@ -811,6 +811,14 @@ video {
   font-weight: 700;
 }
 
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
 .hover\:bg-cyan-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(165 243 252 / var(--tw-bg-opacity));
